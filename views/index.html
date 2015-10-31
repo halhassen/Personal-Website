@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Hamad Alhassen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+	<link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.11.2/angular-material.min.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="./favicons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="./favicons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body class="ground">
+	<div ng-controller="NavController as nav" ng-cloak> 
+		<div class="nopadding">
+			<!-- <div class="col-md-5"> -->				
+			<button ng-click="nav.openMenu()" style="font-size: 30px; padding-right: 146.5px" class="fa fa-bars fa-1"> Menu</button>
+			<div ng-class="{false: 'closeIt', true: 'openIt'}[nav.menu]" ng-show="nav.menu">
+				<div style="padding-bottom: 13px; padding-top: 13px" class="text-center menuBar">
+					<img style="height: 200px" src="https://pbs.twimg.com/profile_images/621540620583043072/AQIvPBpt_400x400.jpg" class="img img-thumbnail" /><br>
+					<a ui-sref="Home"><h1 class="menuItem fa fa-home fa-2x"> Home</h1></a><br>
+					<a ui-sref="Contact"><h1 class="menuItem fa fa-paper-plane fa-2x"> Contact</h1></a><br>
+					<a href="https://github.com/halhassen"><h1 class="menuItem fa fa-github-square fa-2x"> GitHub</h1></a><br>
+					<h1 class="fa fa-2x"> Social Media</h1><br>
+
+					<!-- social medias -->
+					<a class="menuItem fa fa-twitter on fa-square-o fa-2x" href="https://twitter.com/HamadZal"> </a>
+					<a class="menuItem fa fa-linkedin fa-2x" href="https://www.linkedin.com/in/hamadalhassen
+					"> </a>
+				</div>
+			</div>
+			<!-- </div> -->		
+		</div>
+		<ui-view></ui-view>
+	</div>
+	<!-- Ext Libs -->
+	<script src="angular/angular.min.js"></script>
+	<script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- Angular Material Design -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+	<!-- Global Src -->
+	<script src="/javascript/app.js"></script>
+	<!-- Factories -->
+	<script src="/javascript/services/HomeFactory.js"></script>
+	<!-- Controllers -->
+	<script src="/javascript/controllers/ContactController.js"></script>
+	<script src="/javascript/controllers/NavController.js"></script>
+	<script src="/javascript/controllers/HomeController.js"></script>
+</body>
+</html>
