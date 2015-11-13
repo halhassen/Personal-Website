@@ -30,7 +30,6 @@
 <body class="ground">
 	<div ng-controller="NavController as nav" ng-cloak> 
 		<div class="nopadding">
-			<!-- <div class="col-md-5"> -->				
 			<button ng-click="nav.openMenu()" style="font-size: 30px; padding-right: 146.5px" class="fa fa-bars fa-1"> Menu</button>
 			<div ng-class="{false: 'closeIt', true: 'openIt'}[nav.menu]" ng-show="nav.menu">
 				<div style="padding-bottom: 13px; padding-top: 13px" class="text-center menuBar">
@@ -46,7 +45,18 @@
 					"> </a>
 				</div>
 			</div>
-			<!-- </div> -->		
+
+			<!-- <div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span2">
+						Sidebar content
+					</div>
+					<div class="span10">
+						Body content
+					</div>
+				</div>
+			</div> -->
+
 		</div>
 		<ui-view></ui-view>
 	</div>

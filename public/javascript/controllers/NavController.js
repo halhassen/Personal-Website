@@ -10,9 +10,6 @@
 		vm.title = 'Welcome to our App!';
 		vm.menu = false;
 		
-
-
-
 		vm.openMenu = function() {
 			if(vm.menu) {
 				$timeout(function() {
