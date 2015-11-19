@@ -7,7 +7,60 @@
 
 	function HomeController() {
 		var vm = this;
-		vm.title = 'Welcome to our App!';
+
+		//Skills
+		vm.codingSkills = [ 
+		{name: 'HTML5', level: '8'},
+		{name: 'CSS3', level: '8'},
+		{name: 'Node Package Manager', level: '8'},
+		{name: 'Bower', level: '8'},
+		{name: 'Bootstrap', level: '7'},
+		{name: 'JavaScript', level: '7'},
+		{name: 'AngularJS', level: '7'},
+		{name: 'jQuery', level: '6'},
+		{name: 'MongoDB', level: '6'},
+		{name: 'ExpressJS', level: '6'},
+		{name: 'NodeJS', level: '6'},
+		{name: 'JSON', level: '6'}
+		];
+
+		vm.programs = [
+		{name: 'Google Analytics', level: '8'},
+		{name: 'Photoshop', level: '7'},
+		{name: 'Google AdWords', level: '6'},
+		{name: 'SPSS', level: '5'},
+		{name: 'Statistix', level: '5'}
+		];
+
+		vm.otherSkills = [
+		{name: 'Agile Software Development', level: '8'},
+		{name: 'Git Workflow', level: '7'},
+		{name: 'Market Research', level: '7'},
+		{name: 'Wireframing', level: '7'},
+		{name: 'Marketing', level: '6'},
+		{name: 'Social Media', level: '5'}
+		]
+
+		vm.passions = [
+		{name: 'Basketball', level: '9'},
+		{name: 'Music', level: '8'},
+		{name: 'Games', level: '7'},
+		{name: 'TV Shows', level: '6'},
+		{name: 'Fitness', level: '6'},
+		{name: 'Cooking', level: '5'}
+		];
+
+		//Portfolio
+
+		vm.portfolio = [
+		{
+			url: 'http://www.leagueforce.us/#/',
+			project: "League Force", 
+			image: 'http://res.cloudinary.com/halhassen/image/upload/c_scale,h_210,w_373,z_2.4/v1447791925/Screen_Shot_2015-11-17_at_12.23.20_PM_j2usgx.png',
+			description: "I was the front-end lead for a group of two other developers for Coder Camp's final project. Web app that allows users to create sports leagues, add teams, post newsletters, and schedule matches.",
+			build: "The MEAN Stack, Mongoose, Passport.js, Google Maps API, Google Auth API, FaceBook Auth API, Cloudinary API, HTML5, CSS3, and Bootstrap."
+		}
+		]
 
 	}
 })();

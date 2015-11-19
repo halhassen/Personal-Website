@@ -1,9 +1,23 @@
-.menuBar {
-	width: 270px;
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(https://fonts.googleapis.com/css?family=Crimson);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+
+body, html {
 	height: 100%;
-	background: brown;
-	z-index: -2;
-	border: .75px solid black;
+}
+
+.crimson {
+	font-family: Crimson;
+	font-size: 1.5em;
+	color: rgb(80, 80, 80);
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
 }
 
 a:hover {
@@ -11,14 +25,328 @@ a:hover {
 	text-decoration: none;
 }
 
+a:active {
+	text-decoration: none;
+}
+
+.aboutBox a {
+	text-decoration: underline;
+	color: rgb(100, 100, 100);
+}
+
+.logo:hover {
+	cursor: pointer;
+}
+
 .menuItem {
+	margin-top: 75px;
 	color: black;
 	text-decoration: none;
 }
 
+.spacing {
+	margin-right: 5px;
+}
+
 .ground {
-	background: url(http://res.cloudinary.com/halhassen/image/upload/e_sepia/v1445917928/IMG_3814_ldwjcu.jpg) no-repeat center right fixed;
+	background: url(http://res.cloudinary.com/halhassen/image/upload/bo_43px_solid_rgb:000,c_scale,dl_129,h_700,o_30,w_1356,z_1/v1445917933/IMG_3823_ycoc6p.jpg) no-repeat center;
+	background-attachment: fixed;
 	z-index: -2;
 	width: 100%;
 	height: 100%;
+}
+
+.contactBox {
+	margin-top: 10px;
+	padding-top: 10px;
+	width: 800px;
+	height: 100%;
+	background: rgb(240, 240, 240);
+	border-radius: 15px 15px;
+}
+
+.aboutBox {
+	margin-top: 10px;
+	padding-top: 10px;
+	width: 800px;
+	height: 100%;
+	background: rgb(240, 240, 240);
+	border-radius: 15px 15px;
+}
+
+.logo {
+	color: white;
+	font-family: Lobster, cursive;
+}
+
+h1 {
+	font-family: Lobster
+}
+
+h2 {
+	font-family: Lobster;
+	color: black;
+}
+
+.subtext {
+	font-size: 1.25em;
+}
+
+.nav-menu {
+	width: 360px;
+	height: 250px;
+	margin-top: 20px;
+	cursor: pointer;
+	/* Hover */
+	-webkit-transition: .75s;
+	-moz-transition: .75s;
+	-o-transition: .75s;
+	-ms-transition: .75s;
+	transition: .75s;  
+}
+
+/* Portfolio Page */
+
+.image { 
+	position: relative; 
+	width: 100%; 
+}
+
+.BG {
+	opacity: .1;
+	position: absolute; 
+}
+
+.imageText { 
+	top: 25px; 
+	width: 373px; 
+	height: 210px;
+	color: white;
+	background: rgb(15, 15, 15);
+	opacity: .8;
+}
+
+.portfolio-menu {
+	cursor: pointer;
+	/* Hover */
+	-webkit-transition: .75s;
+	-moz-transition: .75s;
+	-o-transition: .75s;
+	-ms-transition: .75s;
+	transition: .75s;  
+}
+
+.portfolio-menu:hover {
+	/*background-color: black;*/
+	/*opacity: .1;*/
+}
+
+/* Home Page */
+
+.nav-menu:hover {
+	border: solid rgb(230, 230, 230) 5px;
+}
+
+.blue {	background-color: rgb(50, 172, 225) }
+
+.teal {	background-color: rgb(38, 205, 171) }
+
+.red { background-color: rgb(249, 103, 78) }
+
+.orange { background-color: rgb(248, 105, 32) }
+
+.green { background-color: rgb(116, 189, 79) }
+
+.purple { background-color: rgb(154, 92, 180) }
+
+
+/* Skills Page */
+.skillsBox {
+	margin-top: 10px;
+	padding-top: 10px;
+	width: 800px;
+	height: 525px;
+	background: rgb(240, 240, 240);
+	border-radius: 15px 15px;
+	overflow-y:auto
+}
+
+.progressBar {
+	margin-bottom: 13px;
+	margin-bottom: 1.66em;
+}
+
+.progressBar h5 {
+	font-family: Fira Sans;
+	margin-top: 4.5px;
+	color: rgb(240, 240, 240);
+}
+
+.progressBarContainer {
+	width: 300px;
+	height: 1.6em;
+	background: #e6eae3;
+	background: rgba(8,102,220,.2);
+	overflow: hidden;
+	border-radius: 5px;
+	position: relative;
+}
+
+.progressBarValue {
+	height: 1.6em;
+	float: left;
+	background: #0866dc;
+	background: rgba(8,102,220,.75);
+	position: relative;
+
+}
+
+.value-0 { width: 0; }
+
+.value-1 { width: 10%; }
+
+.value-2 { width: 20%; }
+
+.value-3 { width: 30%; }
+
+.value-4 { width: 40%; }
+
+.value-5 { width: 50%; }
+
+.value-6 { width: 60%; }
+
+.value-7 { width: 70%; }
+
+.value-8 { width: 80%; }
+
+.value-9 { width: 90%; }
+
+.value-10 { width: 100%; }
+
+
+/* Material Inputs */
+.group 			  { 
+	position:relative; 
+	margin-bottom: 35px; 
+	margin-left: 200px;
+}
+input 				{
+	font-size:18px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width:300px;
+	border:none;
+	border-bottom:1px solid #757575;
+	background-color: rgb(240, 240, 240);
+}
+
+textarea {
+	font-size:18px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width:300px;
+	max-width: 500px;
+	/*temporary solution */
+	max-height: 220px;
+	border:none;
+	border-bottom:1px solid #757575;
+	background-color: rgb(240, 240, 240);
+}
+
+textarea:focus 		{ outline:none; }
+
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+	color:#999; 
+	font-size:18px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top:10px;
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+	top:-20px;
+	font-size:14px;
+	color:#5264AE;
+}
+
+textarea:focus ~ label, textarea:valid ~ label 		{
+	top:-20px;
+	font-size:14px;
+	color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+	content:'';
+	height:2px; 
+	width:0;
+	bottom:1px; 
+	position:absolute;
+	background:#5264AE; 
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+}
+.bar:before {
+	left:50%;
+}
+.bar:after {
+	right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+}
+
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+	width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+	position:absolute;
+	height:60%; 
+	width:100px; 
+	top:25%; 
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+}
+
+textarea:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
 }

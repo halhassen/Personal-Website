@@ -32,17 +32,6 @@ app.use(bodyParser.json());
 
 var mailRoutes = require('./routes/MailRoutes');
 
-// Configure SMTP server details.
-// SMTP is the mail server responsible for sending and retrieving email
-
-var smtpTransport = nodemailer.createTransport("SMTP", {
-	service: "Gmail",
-	auth: {
-		user: "halhassen@gmail.com",
-		pass: "36Chambers"
-	}
-});
-
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');

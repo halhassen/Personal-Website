@@ -9,7 +9,6 @@
 		var vm = this;
 		vm.mail = {};
 		
-
 		vm.sendMail = function(submit) {
 			vm.mail = {
 				email: submit.email,
