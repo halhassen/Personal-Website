@@ -41,5 +41,5 @@ app.use('/api/mail/', mailRoutes)
 
 var server = app.listen(port, function() {
 	var host = server.address().address;
-	console.log('Example app listening at http://localhost:' + port);
+	console.log('Example app listening at ' +  host + port);
 });
