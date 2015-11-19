@@ -15,12 +15,13 @@
 				sender: submit.sender,
 				message: submit.message
 			};
+
 			HomeFactory.sendMail(vm.mail).then(function(res) {
 				delete vm.mail;
 				vm.mail = {};
 				$state.go('Home')
-			}) ;
-		} ;
+			});
+		};
 
 	}
 })();

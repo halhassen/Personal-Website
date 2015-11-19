@@ -30,14 +30,14 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var mailRoutes = require('./routes/MailRoutes');
+var mailroutes = require('./routes/MailRoutes');
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.use('/api/mail/', mailRoutes)
+app.use('/api/mail/', mailroutes)
 
 var server = app.listen(port, function() {
 	var host = server.address().address;
