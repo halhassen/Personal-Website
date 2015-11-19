@@ -4,16 +4,17 @@
   "description": "An application for the Coder Camps FullStack JS course",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.12.4",
-    "bootbox": "^4.4.0",
-    "dotenv": "^1.2.0",
-    "ejs": "^2.3.1",
-    "express": "^4.12.4",
-    "mongoose": "^4.2.3",
-    "nodemailer": "^1.8.0"
+    "start": "nodemon server.js",
+    "postinstall": "node node_modules/bower/bin/bower install"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "body-parser": "^1.12.4",
+      "bootbox": "^4.4.0",
+      "dotenv": "^1.2.0",
+      "ejs": "^2.3.1",
+      "express": "^4.12.4",
+      "mongoose": "^4.2.3",
+      "nodemailer": "^1.8.0"
+    }
   }
-}
