@@ -1,3 +1,8 @@
+if(!process.env.NODE_ENV){
+	var dotenv = require("dotenv");
+	dotenv.load();
+}
+
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -30,18 +35,14 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//var mailRoutes = require('/routes/mailRoutes.js');
+var mailRoutes = require('/routes/mailRoutes.js');
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
-var fs = require('fs');
-var MAIL_ROUTE = fs.readFileSync("./routes/mailRoutes.js");
-console.log(MAIL_ROUTE.toString("utf8"));
-
-app.use('/api/mail/', MAIL_ROUTE);
+app.use('/api/mail/', mailRoutes);
 
 var server = app.listen(port, function() {
 	var host = server.address().address;
