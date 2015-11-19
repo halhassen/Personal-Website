@@ -30,7 +30,7 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var mailRoutes = require('./routes/MailRoutes.js');
+var mailRoutes = require('routes/emailRoutes.js');
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {
