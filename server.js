@@ -30,14 +30,18 @@ app.set('view options', {
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-var mailRoutes = require('/routes/emailRoutes.js');
+//var mailRoutes = require('/routes/mailRoutes.js');
 
 //on homepage load, render the index page
 app.get('/', function(req, res) {
 	res.render('index');
 });
 
-app.use('/api/mail/', mailRoutes)
+var fs = require('fs');
+var MAIL_ROUTE = fs.readFileSync("./routes/mailRoutes.js");
+console.log(MAIL_ROUTE.toString("utf8"));
+
+app.use('/api/mail/', MAIL_ROUTE);
 
 var server = app.listen(port, function() {
 	var host = server.address().address;
