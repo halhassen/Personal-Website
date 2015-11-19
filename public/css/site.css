@@ -65,6 +65,12 @@ a:active {
 	border-radius: 15px 15px;
 }
 
+.contactInfo {
+	font-size: .75em;
+	font-family: Fira Sans;
+	color: black;
+}
+
 .aboutBox {
 	margin-top: 10px;
 	padding-top: 10px;
@@ -84,7 +90,7 @@ h1 {
 }
 
 h2 {
-	font-family: Lobster;
+	font-family: Fira Sans;
 	color: black;
 }
 
