@@ -42,6 +42,7 @@
 		]
 
 		vm.passions = [
+		{name: 'Puns. Lots of puns.', level: '10'},
 		{name: 'Basketball', level: '9'},
 		{name: 'Music', level: '8'},
 		{name: 'Games', level: '7'},
