@@ -6,4 +6,4 @@ var MailSchema = new mongoose.Schema({
 	message: String
 });
 
-mongoose.model('Mail', MailSchema)
+mongoose.model('Mail', MailSchema);

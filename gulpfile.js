@@ -14,7 +14,7 @@ htmlminify = require("gulp-minify-html"),
 del = require('del');
 
 gulp.task('styles', function() {
-	return gulp.src('css/*.css', { style: 'expanded' })
+	return gulp.src('public/css/*.css', { style: 'expanded' })
 	.pipe(autoprefixer('last 2 version'))
 	.pipe(gulp.dest('dist/assets/css'))
 	.pipe(rename({suffix: '.min'}))
@@ -25,18 +25,19 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(['/javascript/**/*.js', './models/*.js', '/javascript/*.js'])
-	// .pipe(jshint('.jshintrc'))
-	// .pipe(jshint.reporter('default'))
-	.pipe(concat('main.js'))
+	return gulp.src(['public/javascript/**/*.js', './models/*.js'])
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(uglify())
+	.pipe(concat('main.js'))
 	.pipe(gulp.dest('dist/assets/js'))
+	.pipe(livereload())
 	.pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('templates' , function(){
-	return gulp.src("/templates/*.html")
+	return gulp.src("public/templates/*.html")
 	.pipe(htmlminify())
 	.pipe(gulp.dest("dist/assets/templates"))
 	.pipe(livereload())
@@ -51,16 +52,12 @@ gulp.task('clean', function() {
 gulp.task('default', ['clean'], function() {
 	gulp.start('styles', 'scripts', 'templates');
 });
+
 // Watch
 gulp.task('watch', function() {
-
-	gulp.watch('css/*.css', ['styles']);
-
-	gulp.watch('/javascript/**/*.js', ['scripts']);
-
-	gulp.watch('/templates/*.html', ['templates']);
-
-	livereload.listen();
-
+	livereload.listen({start: true});
+	gulp.watch('public/css/*.css', ['styles']);
+	gulp.watch('public/javascript/**/*.js', ['scripts']);
+	gulp.watch('public/templates/*.html', ['templates']);
 	gulp.watch(['dist/**']).on('change', livereload.changed);
 });

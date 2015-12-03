@@ -13,9 +13,9 @@
 			var q = $q.defer();
 			$http.post('/api/mail/send', message).success(function(res) {
 				q.resolve();
-			})		
+			});		
 			return q.promise;	
-		}
+		};
 
 
 		return o;

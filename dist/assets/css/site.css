@@ -107,10 +107,6 @@ h2 {
 	margin-top: 20px;
 	cursor: pointer;
 	/* Hover */
-	-webkit-transition: .75s;
-	-moz-transition: .75s;
-	-o-transition: .75s;
-	-ms-transition: .75s;
 	transition: .75s;  
 }
 
@@ -138,10 +134,6 @@ h2 {
 .portfolio-menu {
 	cursor: pointer;
 	/* Hover */
-	-webkit-transition: .75s;
-	-moz-transition: .75s;
-	-o-transition: .75s;
-	-ms-transition: .75s;
 	transition: .75s;  
 }
 
@@ -336,22 +328,16 @@ textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
 /* active state */
 input:focus ~ .highlight {
 	-webkit-animation:inputHighlighter 0.3s ease;
-	-moz-animation:inputHighlighter 0.3s ease;
 	animation:inputHighlighter 0.3s ease;
 }
 
 textarea:focus ~ .highlight {
 	-webkit-animation:inputHighlighter 0.3s ease;
-	-moz-animation:inputHighlighter 0.3s ease;
 	animation:inputHighlighter 0.3s ease;
 }
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-	from { background:#5264AE; }
-	to 	{ width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
 	from { background:#5264AE; }
 	to 	{ width:0; background:transparent; }
 }

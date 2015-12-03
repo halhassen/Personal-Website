@@ -12,8 +12,6 @@
 		vm.codingSkills = [ 
 		{name: 'HTML5', level: '8'},
 		{name: 'CSS3', level: '8'},
-		{name: 'Node Package Manager', level: '8'},
-		{name: 'Bower', level: '8'},
 		{name: 'Bootstrap', level: '7'},
 		{name: 'JavaScript', level: '7'},
 		{name: 'AngularJS', level: '7'},
@@ -24,9 +22,12 @@
 		{name: 'JSON', level: '6'}
 		];
 
-		vm.programs = [
+		vm.tools = [
 		{name: 'Google Analytics', level: '8'},
+		{name: 'Node Package Manager', level: '8'},
+		{name: 'Bower', level: '8'},
 		{name: 'Photoshop', level: '7'},
+		{name: 'Gulp', level: '6'},
 		{name: 'Google AdWords', level: '6'},
 		{name: 'SPSS', level: '5'},
 		{name: 'Statistix', level: '5'}
@@ -39,7 +40,7 @@
 		{name: 'Wireframing', level: '7'},
 		{name: 'Marketing', level: '6'},
 		{name: 'Social Media', level: '5'}
-		]
+		];
 
 		vm.passions = [
 		{name: 'Puns. Lots of puns.', level: '10'},
@@ -61,7 +62,7 @@
 			description: "I was the front-end lead for a group of two other developers for Coder Camp's final project. Web app that allows users to create sports leagues, add teams, post newsletters, and schedule matches.",
 			build: "The MEAN Stack, Mongoose, Passport.js, Google Maps API, Google Auth API, FaceBook Auth API, Cloudinary API, HTML5, CSS3, and Bootstrap."
 		}
-		]
+		];
 
 	}
 })();
