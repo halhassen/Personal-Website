@@ -15,6 +15,7 @@ del = require('del');
 
 gulp.task('styles', function() {
 	return gulp.src('public/css/*.css', { style: 'expanded' })
+	.pipe(concat('styles.css'))
 	.pipe(autoprefixer('last 2 version'))
 	.pipe(gulp.dest('dist/assets/css'))
 	.pipe(rename({suffix: '.min'}))
@@ -25,12 +26,12 @@ gulp.task('styles', function() {
 });
 
 gulp.task('scripts', function() {
-	return gulp.src(['public/javascript/**/*.js', './models/*.js'])
+	return gulp.src(['public/javascript/**/*.js'])
+	.pipe(concat('main.js'))
 	.pipe(jshint())
 	.pipe(jshint.reporter('default'))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(uglify())
-	.pipe(concat('main.js'))
 	.pipe(gulp.dest('dist/assets/js'))
 	.pipe(livereload())
 	.pipe(notify({ message: 'Scripts task complete' }));
