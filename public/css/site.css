@@ -6,6 +6,8 @@ body, html {
 	height: 100%;
 }
 
+.mobile { display: none; }
+
 .crimson {
 	font-family: Crimson Text;
 	font-size: 1.5em;
@@ -49,11 +51,23 @@ a:active {
 }
 
 .ground {
-	background: url(http://res.cloudinary.com/halhassen/image/upload/c_scale,dl_129,h_1500,o_30,w_2720,z_1/v1445917933/IMG_3823_ycoc6p.jpg) no-repeat center;
-	background-attachment: fixed;
+	background: url(http://res.cloudinary.com/halhassen/image/upload/c_scale,dl_129,h_1500,o_30,w_2720,z_1/v1445917933/IMG_3823_ycoc6p.jpg) no-repeat fixed center;
 	z-index: -2;
 	width: 100%;
 	height: 100%;
+}
+
+.nav-menu {
+	width: 360px;
+	height: 250px;
+	margin-top: 20px;
+	cursor: pointer;
+	/* Hover */
+	-webkit-transition: .75s;
+	-moz-transition: .75s;
+	-o-transition: .75s;
+	-ms-transition: .75s;
+	transition: .75s;  
 }
 
 .contactBox {
@@ -99,19 +113,6 @@ h2 {
 	font-size: 1.45em;
 	color: rgb(24, 24, 24);
 	/*font-weight: bold;*/
-}
-
-.nav-menu {
-	width: 360px;
-	height: 250px;
-	margin-top: 20px;
-	cursor: pointer;
-	/* Hover */
-	-webkit-transition: .75s;
-	-moz-transition: .75s;
-	-o-transition: .75s;
-	-ms-transition: .75s;
-	transition: .75s;  
 }
 
 /* Portfolio Page */
@@ -358,4 +359,178 @@ textarea:focus ~ .highlight {
 @keyframes inputHighlighter {
 	from { background:#5264AE; }
 	to 	{ width:0; background:transparent; }
+}
+
+/* Screen is less than 680px */
+@media screen and (max-width: 680px) {
+	.screen { display: none; }
+
+	.mobile { 
+		margin-top: 50px;
+		display: block;
+	}
+
+	/* Home */
+	.ground {
+		background: url(http://res.cloudinary.com/halhassen/image/upload/c_scale,dl_129,h_800,o_30,w_1000,z_1/v1445917933/IMG_3823_ycoc6p.jpg) nrepeat center;
+		z-index: -2;
+		width: 100%;
+		height: 100%;
+	}
+
+	.nav-menuMobile {
+		width: 90px;
+		height: 90px;
+		margin-top: 20px;
+		cursor: pointer;
+		-webkit-transition: .75s;
+		-moz-transition: .75s;
+		-o-transition: .75s;
+		-ms-transition: .75s;
+		transition: .75s;  
+	}
+
+	.nav-menuMobile h1 {
+		font-size: 80%;
+		position: relative;
+	}
+	
+	.menuItem {
+		margin-top: 10px;
+		color: black;
+		text-decoration: none;
+	}
+
+	/* Contact */
+	.contactBox {
+		margin: auto;
+		padding-top: 10px;
+		width: 100%;
+		height: 100%;
+		background: rgb(240, 240, 240);
+		border-radius: 15px 15px;
+	}
+
+	.contactBox h2 {
+		font-size: .8em;
+	}
+
+	.group { 
+		position: relative; 
+		margin: auto;
+		margin-bottom: 25px;
+	}
+
+	.form-group {
+		padding-right: 55px;
+	}
+
+	.contactInfo {
+		font-size: .60em;
+		font-family: Fira Sans;
+		color: black;
+	}
+
+	input 				{
+		font-size:18px;
+		padding:10px 10px 10px 5px;
+		display:block;
+		width:100%;
+		border:none;
+		border-bottom:1px solid #757575;
+		background-color: rgb(240, 240, 240);
+	}
+
+	textarea {
+		font-size:18px;
+		padding:10px 10px 10px 5px;
+		display:block;
+		width:250px;
+		max-width: 325px;
+		max-height: 220px;
+		border:none;
+		border-bottom:1px solid #757575;
+		background-color: rgb(240, 240, 240);
+	}
+
+	/* About */
+	.aboutBox {
+		margin-top: 10px;
+		padding-top: 10px;
+		width: 95%;
+		height: 90%;
+		background: rgb(240, 240, 240);
+		border-radius: 15px 15px;
+		margin: auto;
+	}
+
+	.crimson {
+		font-family: Crimson Text;
+		font-size: 1.15em;
+		color: rgb(80, 80, 80);
+	}
+
+	.aboutBox img {
+		margin-bottom: 10px;
+	}
+
+	/* Portfolio Page */
+	.imageText { 
+		top: 25px; 
+		/*width: 373px;  
+		height: 210px;*/
+		width: 240px;  
+		height: 157px;
+		color: white;
+		background: rgb(15, 15, 15);
+		opacity: .8;
+	}
+
+	.image img {
+		width: 240px;  
+		height: 157px;
+	}
+
+	/* Skills Page */
+	.skillsBox {
+		margin-top: 10px;
+		padding-top: 10px;
+		width: 100%;
+		height: 545px;
+		background: rgb(240, 240, 240);
+		border-radius: 15px 15px;
+		overflow-y:auto;
+		margin: auto;
+	}
+
+	.progressBar {
+		margin-bottom: 13px;
+		margin-bottom: 1.66em;
+	}
+
+	.progressBar h5 {
+		font-family: Fira Sans;
+		margin-top: 4.5px;
+		color: rgb(240, 240, 240);
+	}
+
+	.progressBarContainer {
+		width: 300px;
+		height: 1.6em;
+		background: #e6eae3;
+		background: rgba(8,102,220,.2);
+		overflow: hidden;
+		border-radius: 5px;
+		position: relative;
+	}
+
+	.progressBarValue {
+		height: 1.6em;
+		float: left;
+		background: #0866dc;
+		background: rgba(8,102,220,.75);
+		position: relative;
+
+	}
+
 }

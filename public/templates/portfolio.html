@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4" ng-repeat="port in vm.portfolio">
-					<div class="image" >
+					<div class="image">
 						<a href="{{port.url}}">
 							<img class="portfolio-menu" style="margin-top: 25px;" ng-src="{{port.image}}" ng-mouseenter="hover = true">
 							<div class="BG" ng-mouseleave="hover = false" ng-hide='!hover' ng-class="{'imageText': hover, 'animated': hover, 'pulse': hover}">
