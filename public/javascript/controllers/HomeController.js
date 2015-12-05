@@ -3,9 +3,9 @@
 	angular.module('app')
 	.controller('HomeController', HomeController);
 
-	HomeController.$inject = [];
+	HomeController.$inject = ["$window"];
 
-	function HomeController() {
+	function HomeController($window) {
 		var vm = this;
 
 		//Skills
@@ -52,7 +52,7 @@
 		{name: 'Cooking', level: '5'}
 		];
 
-		//Portfolio
+		//Portfolio Screen
 
 		vm.portfolio = [
 		{
@@ -63,6 +63,16 @@
 			build: "The MEAN Stack, Mongoose, Passport.js, Google Maps API, Google Auth API, FaceBook Auth API, Cloudinary API, HTML5, CSS3, and Bootstrap."
 		}
 		];
+
+		vm.portfolioMobile = [
+		{
+			url: 'http://www.leagueforce.us/#/',
+			project: "League Force", 
+			image: 'http://res.cloudinary.com/josemedina760/image/upload/c_scale,h_50,w_50/v1444790611/force_logo_svh4rp.png',
+			description: "I was the group's front-end lead for Coder Camp's final project. Web app that allows users to create sports leagues, add teams, post newsletters, and schedule matches.",
+			build: "The MEAN Stack, Mongoose, Passport.js, Google Maps API, Google Auth API, FaceBook Auth API, Cloudinary API, HTML5, CSS3, and Bootstrap."
+		}
+		]
 
 	}
 })();
