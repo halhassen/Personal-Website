@@ -13,10 +13,10 @@ var port = process.env.PORT || 3000;
 
 require('./models/mail');
 
-var db = process.env.MONGOLAB_URI || 'mongodb://localhost/website' ;
+var db = process.env.MONGOLAB_URI || 'mongodb://localhost/website';
 mongoose.connect(db, function(err) {
-	if(err) return console.log("Error connecting to db: %s", db) ;
-	console.log("Connected to %s", db) ;
+	if(err) return console.log("Error connecting to db: %s", db);
+	console.log("Connected to %s", db);
 });
 
 app.set('views', path.join(__dirname, 'views'));
