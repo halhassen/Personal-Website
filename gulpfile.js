@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 sass = require('gulp-ruby-sass'),
 autoprefixer = require('gulp-autoprefixer'),
-minifycss = require('gulp-minify-css'),
+cleancss = require('gulp-clean-css'),
 jshint = require('gulp-jshint'),
 uglify = require('gulp-uglify'),
 imagemin = require('gulp-imagemin'),
@@ -19,7 +19,7 @@ gulp.task('styles', function() {
 	.pipe(autoprefixer('last 2 version'))
 	.pipe(gulp.dest('dist/assets/css'))
 	.pipe(rename({suffix: '.min'}))
-	.pipe(minifycss())
+	.pipe(cleancss())
 	.pipe(gulp.dest('dist/assets/css'))
 	.pipe(livereload())
 	.pipe(notify({ message: 'Styles task complete' }));
