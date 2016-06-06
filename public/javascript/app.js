@@ -1,6 +1,6 @@
 (function() {
 	'use strict';
-	angular.module('app', ['ui.router', 'ngBootbox', 'ngMaterial'])
+	angular.module('app', ['ui.router', 'ngBootbox', 'ngMaterial', 'ngScrollbar'])
 	.config(Config);
 	Config.$inject = ['$stateProvider', '$urlRouterProvider'];
 	function Config($stateProvider, $urlRouterProvider) {

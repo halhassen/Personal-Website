@@ -7,13 +7,13 @@
 
 	function HomeController($window) {
 		var vm = this;
-
+		
 		//Skills
 		vm.codingSkills = [ 
+		{name: 'JavaScript', level: '8'},
 		{name: 'HTML5', level: '8'},
 		{name: 'CSS3', level: '8'},
 		{name: 'Bootstrap', level: '7'},
-		{name: 'JavaScript', level: '7'},
 		{name: 'AngularJS', level: '7'},
 		{name: 'jQuery', level: '6'},
 		{name: 'MongoDB', level: '6'},
@@ -23,11 +23,11 @@
 		];
 
 		vm.tools = [
-		{name: 'Google Analytics', level: '8'},
 		{name: 'Node Package Manager', level: '8'},
 		{name: 'Bower', level: '8'},
 		{name: 'Photoshop', level: '7'},
-		{name: 'Gulp', level: '6'},
+		{name: 'Gulp', level: '7'},
+		{name: 'Google Analytics', level: '6'},
 		{name: 'Google AdWords', level: '6'},
 		{name: 'SPSS', level: '5'},
 		{name: 'Statistix', level: '5'}
