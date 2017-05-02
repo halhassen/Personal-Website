@@ -2,8 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Crimson+Text);
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 
-body, html {
+html {
+	overflow: hidden;
 	height: 100%;
+}
+
+body {
+	height: 100%;
+	overflow: auto;
 }
 
 .portfolioMobile { display: none; }
@@ -399,6 +405,11 @@ textarea:focus ~ .highlight {
 		display: block;
 	}
 
+	.contact-img {
+		height: 75%;
+		width: 75%;
+	}
+
 	/* Home */
 	.ground {
 		background: url(http://res.cloudinary.com/halhassen/image/upload/c_scale,dl_129,h_800,o_30,w_1000,z_1/v1445917933/IMG_3823_ycoc6p.jpg) nrepeat center;
@@ -465,10 +476,8 @@ textarea:focus ~ .highlight {
 		border-radius: 50%;
 		width: 100%;
 		height: 100%;
-		font-size: 2em;
+		font-size: 1em;
 		text-align: center;
-		color: green;
-		border: solid black;
 	}
 
 	input {

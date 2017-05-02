@@ -1,46 +1,46 @@
-<!-- <div class="animated slideInLeft container"> -->
-<div class="container">
-	<div class="row-fluid">
-		<div class="col-md-offset-2">
-			<div class="contactBox">
-				<form class="form-horizontal" ng-submit="vm.sendMail(vm.mail)">
-					<fieldset>
-						<!-- Form Name -->
-						<legend class="text-center"><h2>Questions? Requests? Wanna Chat?<br> Send Me A Message!</h2>
-							<span class="contactInfo">halhassen@gmail.com - West Covina, California</span></legend>
-							<!-- Inputs -->
-							<div class="group">      
-								<input ng-model="vm.mail.sender" type="text" required>
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label>Name*</label>
-							</div>
-
-							<div class="group">      
-								<input type="text" ng-model="vm.mail.email" required>
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label>Email*</label>
-							</div>
-
-							<div class="group">      
-								<textarea type="text" style="height: 100px" ng-model="vm.mail.message" required></textarea>
-								<span class="highlight"></span>
-								<span class="bar"></span>
-								<label>Message*</label>
-							</div>
-							<div class="animated bounceIn row col-md-12 text-center btn-block thanks" >Thank you for sending a message.<br>I'll be sure to reply quicker than you can say "Event Loop"!
-							</div>
-							<div class="form-group">
-								<label class="col-md-3"></label>
-								<div style="margin-left: 23px" class="col-md-4">
-									<md-button type="submit" class="md-raised md-primary btn btn-lg btn-block" ng-disabled="!vm.mail.sender || !vm.mail.email || !vm.mail.message">Send Mail</md-button>
+<div class="animated slideInLeft container">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="col-md-offset-2">
+				<div class="contactBox">
+					<form class="form-horizontal" ng-submit="vm.sendMail(vm.mail)">
+						<fieldset>
+							<!-- Form Name -->
+							<legend class="text-center"><h2>Questions? Requests? Wanna Chat?<br> Send Me A Message!</h2>
+								<span class="contactInfo">halhassen@gmail.com - West Covina, California</span></legend>
+								<!-- Inputs -->
+								<div class="group">      
+									<input ng-model="vm.mail.sender" type="text" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Name*</label>
 								</div>
-							</div>
-						</fieldset>
-					</form>
+
+								<div class="group">      
+									<input type="text" ng-model="vm.mail.email" required>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Email*</label>
+								</div>
+
+								<div class="group">      
+									<textarea type="text" style="height: 100px" ng-model="vm.mail.message" required></textarea>
+									<span class="highlight"></span>
+									<span class="bar"></span>
+									<label>Message*</label>
+								</div>
+								<div class="animated bounceIn row col-md-12 text-center btn-block thanks" ng-hide="vm.thankYou == false">Thank you for sending a message.<br>I'll be sure to reply quicker than you can say "Event Loop"!
+								</div>
+								<div class="form-group">
+									<label class="col-md-3"></label>
+									<div style="margin-left: 23px" class="col-md-4">
+										<md-button type="submit" class="md-raised md-primary btn btn-lg btn-block" ng-disabled="!vm.mail.sender || !vm.mail.email || !vm.mail.message">Send Mail</md-button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-<!-- </div> -->

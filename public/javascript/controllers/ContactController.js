@@ -20,7 +20,7 @@
 			HomeFactory.sendMail(vm.mail).then(function(res) {
 				delete vm.mail;
 				vm.mail = {};
-				$timeout(function() { $state.go('Home') },3000);
+				$timeout(function() { $state.go('Home') },2000);
 			});
 		};
 
