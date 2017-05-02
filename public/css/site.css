@@ -461,7 +461,18 @@ textarea:focus ~ .highlight {
 		color: black;
 	}
 
-	input 				{
+	.thanks {
+		border-radius: 50%;
+		background: red;
+		width: 100%;
+		height: 100%;
+		font-size: 2em;
+		text-align: center;
+		color: green;
+		border: solid black;
+	}
+
+	input {
 		font-size:18px;
 		padding:10px 10px 10px 5px;
 		display:block;
@@ -482,6 +493,7 @@ textarea:focus ~ .highlight {
 		border-bottom:1px solid #757575;
 		background-color: rgb(240, 240, 240);
 	}
+
 
 	/* About */
 	.aboutBox {

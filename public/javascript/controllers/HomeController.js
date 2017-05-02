@@ -72,7 +72,7 @@
 			description: "I was the group's front-end lead for Coder Camp's final project. Web app that allows users to create sports leagues, add teams, post newsletters, and schedule matches.",
 			build: "The MEAN Stack, Mongoose, Passport.js, Google Maps API, Google Auth API, FaceBook Auth API, Cloudinary API, HTML5, CSS3, and Bootstrap."
 		}
-		]
+		];
 
 	}
 })();
