@@ -9,12 +9,23 @@ router.post('/send', function (req, res) {
 	req.body.created = new Date();
 	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
+		// This auth object below works, but is insecure and triggers Gmail security alerts from Google
 		auth: {
 			user: 'halhassen@gmail.com',
 			pass: process.env.EMAIL_PASS
 		}
+
+		// This method is much more secure with OAuth2 and is maintained with Google API's Console
+		// Still figuring out some bugs with it to properly use my key and info
+		// auth: {
+		// 	type: 'OAuth2',
+		// 	user: 'halhassen@gmail.com',
+		// 	clientId: process.env.CLIENT_ID + '.apps.googleusercontent.com',
+		// 	clientSecret: process.env.CLIENT_SECRECT + 'FkZi11Aa0BkVyAQYTN3D1J_z'
+		// } 
 	});
 
+	console.log(transporter);
 	var mailOptions = {
     	//from: 'Hamad Alhassen <halhassen@gmail.com>', // sender address
     	to: 'halhassen@gmail.com', // list of receivers

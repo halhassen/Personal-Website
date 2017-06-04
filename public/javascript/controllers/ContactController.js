@@ -10,6 +10,7 @@
 		vm.mail = {};
 		vm.thankYou = false;
 
+		// Uses nodemailer in the Factory and Route
 		vm.sendMail = function(submit) {
 			vm.mail = {
 				email: submit.email,
